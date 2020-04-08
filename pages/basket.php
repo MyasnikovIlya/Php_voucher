@@ -4,6 +4,8 @@ include 'auth.php';
 $res = 0;
 function send_mail($msg, $email)
 {
+	echo "<script>console.log('Debug Objec123ts: " . $msg . "' );</script>";
+echo "<script>console.log('Debug Objec123ts: " . $email . "' );</script>";
     return mail($email, "Автосалон", $msg);
 }
 
@@ -302,6 +304,7 @@ function write($msg)
                                                         <input type="submit" name="write" value="Записать в файл"/>
                                                     </form>
                                                     <?php
+
                                                     $msg = "Дата и время: " . date("d.m.y H:i") . "\nИмя: " . $name . "\nПочта: " . $email . "\nТип услуги: " . $m[$type][0] . "\nМарка машины: " . $m[$c][0] . "\nИтоговая сумма: " . $res;
                                                     if (isset($_REQUEST['mail'])) {
                                                         if (send_mail($msg, $email)) {
