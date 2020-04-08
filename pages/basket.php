@@ -5,7 +5,7 @@ $res = 0;
 function send_mail($msg, $email)
 {
 	echo "<script>console.log('Debug Objec123ts: " . $msg . "' );</script>";
-echo "<script>console.log('Debug Objec123ts: " . $email . "' );</script>";
+echo "<script>console.log(`Debug Objec123ts: " . $email . "` );</script>";
     return mail($email, "Автосалон", $msg);
 }
 
